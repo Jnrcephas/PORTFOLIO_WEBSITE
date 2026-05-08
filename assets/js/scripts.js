@@ -1310,6 +1310,21 @@ $(function () {
     }
 });
 
+/* =============================================================================
+-------------------------------  Work Tab Toggle  -------------------------------
+============================================================================= */
+$('.work-tab-btn').on('click', function () {
+    var targetTab = $(this).data('tab');
+
+    // Update buttons
+    $('.work-tab-btn').removeClass('active');
+    $(this).addClass('active');
+
+    // Update panels
+    $('.work-tab-panel').removeClass('active');
+    $('#' + targetTab).addClass('active');
+});
+
 
 $(function () {
     var width = $(window).width();
